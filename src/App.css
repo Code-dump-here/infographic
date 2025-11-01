@@ -356,33 +356,258 @@ body {
   font-size: 1.2rem;
 }
 
+.monopoly-item p {
+  margin-bottom: 0.5rem;
+}
+
+.monopoly-item strong {
+  color: #2d3436;
+}
+
+.foundation-detailed h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2d3436;
+}
+
 .foundation-pyramid {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   margin-top: 2rem;
 }
 
 .pyramid-level {
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   background: linear-gradient(135deg, #74b9ff, #0984e3);
   color: white;
-  border-radius: 25px;
-  text-align: center;
+  border-radius: 15px;
+  text-align: left;
   font-weight: 500;
   transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .pyramid-level:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
-.pyramid-level.level-1 { width: 80%; }
-.pyramid-level.level-2 { width: 85%; }
-.pyramid-level.level-3 { width: 90%; }
-.pyramid-level.level-4 { width: 95%; }
-.pyramid-level.level-5 { width: 100%; }
+.level-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.level-content strong {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.level-content p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin: 0.2rem 0;
+}
+
+.pyramid-level.level-1 { width: 85%; }
+.pyramid-level.level-2 { width: 87%; }
+.pyramid-level.level-3 { width: 89%; }
+.pyramid-level.level-4 { width: 91%; }
+.pyramid-level.level-5 { width: 93%; }
+
+.evidence-section h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2d3436;
+}
+
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.evidence-card {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #fd79a8;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.evidence-card h4 {
+  color: #fd79a8;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.evidence-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.evidence-card li {
+  padding: 0.3rem 0;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.evidence-card li:last-child {
+  border-bottom: none;
+}
+
+.evidence-conclusion {
+  background: linear-gradient(135deg, #fd79a8, #fdcb6e);
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+}
+
+.evidence-conclusion h4 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.evidence-conclusion p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.sources-section {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.sources-section h4 {
+  color: #2d3436;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.sources-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.sources-list p {
+  font-size: 0.85rem;
+  color: #636e72;
+  margin: 0;
+  padding: 0.3rem 0;
+  border-left: 3px solid #fd79a8;
+  padding-left: 1rem;
+}
+
+.sources-list a {
+  color: #0984e3;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sources-list a:hover {
+  color: #74b9ff;
+  text-decoration: underline;
+}
+
+.sources-list a:visited {
+  color: #6c5ce7;
+}
+
+.theory-sources,
+.vietnam-sources {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.theory-sources h4,
+.vietnam-sources h4 {
+  color: #2d3436;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.source-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.source-category {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #a29bfe;
+}
+
+.source-category h5 {
+  color: #6c5ce7;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.source-category ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.source-category li {
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
+  color: #2d3436;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.source-category li:last-child {
+  border-bottom: none;
+}
+
+.source-category a {
+  color: #0984e3;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.source-category a:hover {
+  color: #74b9ff;
+  text-decoration: underline;
+}
+
+.source-category a:visited {
+  color: #6c5ce7;
+}
+
+.verification-process {
+  background: rgba(108, 92, 231, 0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(108, 92, 231, 0.2);
+}
+
+.verification-process h5 {
+  color: #6c5ce7;
+  margin-bottom: 1rem;
+}
+
+.verification-process ol {
+  padding-left: 1.2rem;
+}
+
+.verification-process li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.verification-process strong {
+  color: #6c5ce7;
+}
 
 /* Impacts Section */
 .impacts-section h2 {
@@ -574,6 +799,209 @@ body {
 .recommendation-content ol {
   margin-top: 1rem;
   padding-left: 1rem;
+}
+
+/* Vietnam Context Section */
+.vietnam-section {
+  background: linear-gradient(135deg, #e17055, #fd79a8);
+  color: white;
+}
+
+.vietnam-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.vietnam-subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.vietnam-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.vietnam-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.vietnam-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.vietnam-btn.active {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-3px);
+}
+
+.vietnam-btn-content h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.vietnam-btn-content p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.vietnam-analysis {
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+}
+
+.analysis-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.analysis-header h3 {
+  color: #e17055;
+  font-size: 1.8rem;
+}
+
+.monopoly-tag {
+  background: linear-gradient(135deg, #e17055, #fd79a8);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.analysis-content {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.analysis-section h4 {
+  color: #2d3436;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.analysis-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.analysis-section li {
+  padding: 0.5rem 0;
+  border-left: 3px solid #e17055;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 0 8px 8px 0;
+}
+
+.mln-analysis {
+  display: grid;
+  gap: 1rem;
+}
+
+.mln-point {
+  padding: 1rem;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 10px;
+  border-left: 4px solid #e17055;
+}
+
+.vietnam-policy {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 2rem;
+}
+
+.vietnam-policy h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.policy-card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1.5rem;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.policy-card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.policy-card p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.vietnam-challenges {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.vietnam-challenges h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.challenges-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.challenge-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+.challenge-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.challenge-item strong {
+  display: block;
+  margin-bottom: 0.25rem;
 }
 
 /* Quiz Section */
@@ -946,6 +1374,24 @@ body {
   
   .pros-cons {
     grid-template-columns: 1fr;
+  }
+  
+  .vietnam-selector {
+    grid-template-columns: 1fr;
+  }
+  
+  .analysis-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .policy-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .challenge-item {
+    flex-direction: column;
+    text-align: center;
   }
   
   .quiz-navigation {
