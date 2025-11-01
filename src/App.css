@@ -1255,81 +1255,111 @@ body {
   flex-wrap: wrap;
 }
 
-/* AI Usage Section */
-.ai-usage-section {
-  background: linear-gradient(135deg, #a29bfe, #6c5ce7);
+/* Thank You Section */
+.thank-you-section {
+  background: linear-gradient(135deg, #74b9ff, #0984e3);
   color: white;
-}
-
-.ai-usage-section h2 {
   text-align: center;
+  padding: 4rem 2rem;
+}
+
+.thank-you-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.thank-you-section h2 {
+  font-size: 3rem;
   margin-bottom: 2rem;
-  font-size: 2.5rem;
+  background: linear-gradient(45deg, #ffffff, #e1f3ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.ai-declaration {
-  display: grid;
-  gap: 2rem;
-}
-
-.declaration-card {
+.thank-you-message {
   background: rgba(255, 255, 255, 0.1);
   padding: 2rem;
-  border-radius: 15px;
+  border-radius: 20px;
+  margin: 2rem 0;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.ai-usage-table {
-  background: rgba(255, 255, 255, 0.95);
-  color: #333;
-  padding: 2rem;
-  border-radius: 15px;
+.thank-you-message p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
-.ai-usage-table table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-}
-
-.ai-usage-table th,
-.ai-usage-table td {
-  padding: 1rem;
+.thank-you-message ul {
+  list-style: none;
+  padding: 0;
   text-align: left;
-  border-bottom: 1px solid #ddd;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.ai-usage-table th {
-  background: #6c5ce7;
-  color: white;
-  font-weight: bold;
+.thank-you-message li {
+  padding: 0.8rem 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.verification {
-  background: rgba(255, 255, 255, 0.1);
+.thank-you-message li:hover {
+  transform: translateX(10px);
+}
+
+.course-info {
+  background: rgba(255, 255, 255, 0.15);
   padding: 2rem;
-  border-radius: 15px;
+  border-radius: 20px;
+  margin: 2rem 0;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.course-info h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.info-item {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+.info-item strong {
+  color: #e1f3ff;
+}
+
+.closing-note {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.sources ul {
-  margin-top: 1rem;
-  padding-left: 1rem;
-}
-
-.creative-contribution {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 2rem;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.creative-contribution ul {
-  margin-top: 1rem;
-  padding-left: 1rem;
+.closing-note p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.6;
 }
 
 /* Responsive Design */

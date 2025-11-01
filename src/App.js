@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
     'impacts', 
     'solutions',
     'quiz',
-    'ai-usage'
+    'thank-you'
   ];
 
   const navigateSection = (direction) => {
@@ -50,7 +50,7 @@ function App() {
         {currentSection === 4 && <ImpactsSection />}
         {currentSection === 5 && <SolutionsSection />}
         {currentSection === 6 && <QuizSection />}
-        {currentSection === 7 && <AIUsageSection />}
+        {currentSection === 7 && <ThankYouSection />}
       </main>
 
       <div className="section-controls">
@@ -1052,120 +1052,39 @@ const QuizSection = () => {
   );
 };
 
-const AIUsageSection = () => (
-  <section className="section ai-usage-section">
-    <h2>Phụ lục: AI Usage Declaration</h2>
-    
-    <div className="ai-declaration">
-      <div className="declaration-card">
-        <h3>📋 Cam kết liêm chính học thuật</h3>
-        <p>Chúng tôi cam kết AI chỉ được sử dụng như công cụ hỗ trợ, không thay thế hoàn toàn quá trình nghiên cứu và sáng tạo của sinh viên.</p>
+const ThankYouSection = () => (
+  <section className="section thank-you-section">
+    <div className="thank-you-content">
+      <h2>Cảm ơn bạn đã theo dõi!</h2>
+      
+      <div className="thank-you-message">
+        <p>Hy vọng bài thuyết trình này đã giúp bạn hiểu rõ hơn về:</p>
+        <ul>
+          <li>📚 Lý thuyết độc quyền trong kinh tế chính trị Mác-Lênin</li>
+          <li>🌐 Biểu hiện mới của độc quyền trong thời đại số</li>
+          <li>🏢 Các trường hợp cụ thể như Google/Alphabet</li>
+          <li>🇻🇳 Thực tế tại Việt Nam với Grab, Shopee, VinGroup</li>
+          <li>💡 Giải pháp và chiến lược cho sinh viên</li>
+        </ul>
       </div>
 
-      <div className="ai-usage-table">
-        <h3>🤖 Chi tiết sử dụng AI</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Công cụ AI</th>
-              <th>Mục đích sử dụng</th>
-              <th>Prompt chính</th>
-              <th>Kết quả</th>
-              <th>Chỉnh sửa</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>GitHub Copilot</td>
-              <td>Hỗ trợ code React components</td>
-              <td>"Create interactive infographic components"</td>
-              <td>Basic component structure</td>
-              <td>Tùy chỉnh giao diện, thêm nội dung Vietnamese</td>
-            </tr>
-            <tr>
-              <td>ChatGPT</td>
-              <td>Brainstorm layout ideas</td>
-              <td>"Modern monopoly infographic design"</td>
-              <td>Layout suggestions</td>
-              <td>Điều chỉnh phù hợp yêu cầu bài tập</td>
-            </tr>
-            <tr>
-              <td>AI Image Generator</td>
-              <td>Tạo icon và illustrations</td>
-              <td>"Simple icons for tech monopoly"</td>
-              <td>Basic icons</td>
-              <td>Tối ưu kích thước, màu sắc</td>
-            </tr>
-            <tr>
-              <td>AI Research Assistant</td>
-              <td>Thu thập thông tin về Việt Nam</td>
-              <td>"Vietnam digital economy data"</td>
-              <td>Statistical information</td>
-              <td>Kiểm chứng với nguồn chính thức VN</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div className="verification">
-        <h3>✅ Kiểm chứng thông tin</h3>
-        <div className="sources">
-          <h4>Nguồn chính thống được sử dụng và kiểm chứng:</h4>
-          <div className="source-categories">
-            <div className="source-category">
-              <h5>📖 Tài liệu lý thuyết:</h5>
-              <ul>
-                <li><a href="https://nxbsuthuat.vn/" target="_blank" rel="noopener noreferrer">Giáo trình Lý luận chính trị - NXB Chính trị Quốc gia Sự thật (2021)</a></li>
-                <li><a href="https://www.marxists.org/archive/marx/works/1867-c1/" target="_blank" rel="noopener noreferrer">Marx, K. "Das Kapital" - Bản dịch tiếng Việt NXB Sự thật (2018)</a></li>
-                <li><a href="https://www.marxists.org/archive/lenin/works/1916/imp-hsc/" target="_blank" rel="noopener noreferrer">Lenin, V.I. "Chủ nghĩa đế quốc" - NXB Sự thật (2020)</a></li>
-                <li><a href="https://dangcongsan.vn/dai-hoi-xiii" target="_blank" rel="noopener noreferrer">Nghị quyết Đại hội XIII về phát triển kinh tế số</a></li>
-              </ul>
-            </div>
-            
-            <div className="source-category">
-              <h5>📊 Dữ liệu quốc tế:</h5>
-              <ul>
-                <li><a href="https://abc.xyz/investor/" target="_blank" rel="noopener noreferrer">Alphabet Inc. SEC Filings 10-K (2023-2024)</a></li>
-                <li><a href="https://gs.statcounter.com/" target="_blank" rel="noopener noreferrer">StatCounter Global Stats - Search Engine Market Share</a></li>
-                <li><a href="https://www.oecd.org/digital/digital-economy-outlook/" target="_blank" rel="noopener noreferrer">OECD Digital Economy Outlook 2024</a></li>
-                <li><a href="https://ec.europa.eu/competition/" target="_blank" rel="noopener noreferrer">European Commission Antitrust Decisions</a></li>
-              </ul>
-            </div>
-            
-            <div className="source-category">
-              <h5>🇻🇳 Dữ liệu Việt Nam:</h5>
-              <ul>
-                <li><a href="https://mic.gov.vn/" target="_blank" rel="noopener noreferrer">Báo cáo kinh tế số Việt Nam 2024 - Bộ TT&TT</a></li>
-                <li><a href="https://luatvietnam.vn/" target="_blank" rel="noopener noreferrer">Luật Cạnh tranh 2018 - Quốc hội Việt Nam</a></li>
-                <li><a href="https://www.mt.gov.vn/" target="_blank" rel="noopener noreferrer">Thống kê ngành vận tải - Bộ GTVT</a></li>
-                <li><a href="https://www.moit.gov.vn/" target="_blank" rel="noopener noreferrer">Báo cáo thương mại điện tử - Bộ Công Thương</a></li>
-              </ul>
-            </div>
+      <div className="course-info">
+        <h3>Thông tin môn học</h3>
+        <div className="info-grid">
+          <div className="info-item">
+            <strong>Môn:</strong> MLN122 - Kinh tế chính trị Mác-Lênin
           </div>
-          
-          <div className="verification-process">
-            <h5>🔍 Quy trình kiểm chứng:</h5>
-            <ol>
-              <li><strong>Cross-reference:</strong> Mọi số liệu được đối chiếu từ tối thiểu 2 nguồn độc lập</li>
-              <li><strong>Official sources:</strong> Ưu tiên dữ liệu từ cơ quan chính phủ và báo cáo doanh nghiệp chính thức</li>
-              <li><strong>Currency check:</strong> Chỉ sử dụng dữ liệu từ 2022 trở lại đây</li>
-              <li><strong>Academic validation:</strong> Tham khảo các nghiên cứu từ tạp chí học thuật uy tín</li>
-            </ol>
+          <div className="info-item">
+            <strong>Chủ đề:</strong> Độc quyền thời đại 4.0
+          </div>
+          <div className="info-item">
+            <strong>Trường:</strong> Đại học FPT
           </div>
         </div>
       </div>
 
-      <div className="creative-contribution">
-        <h3>🎨 Đóng góp sáng tạo của sinh viên</h3>
-        <ul>
-          <li>Phân tích kết nối lý thuyết Mác-Lênin với thực tế độc quyền số</li>
-          <li>Thiết kế trải nghiệm tương tác độc đáo</li>
-          <li>Lựa chọn case study Google/Alphabet và phân tích chi tiết</li>
-          <li>Nghiên cứu bối cảnh Việt Nam với các ví dụ cụ thể (Grab, Shopee, VinGroup)</li>
-          <li>Đề xuất giải pháp 3 chiến lược tổng hợp cho sinh viên</li>
-          <li>Tích hợp khung pháp lý Việt Nam và chính sách quốc gia</li>
-          <li>Phát triển quiz tương tác với 11 câu hỏi đa dạng</li>
-        </ul>
+      <div className="closing-note">
+        <p>Chúc bạn học tập tốt và áp dụng thành công những kiến thức đã học! 🎓</p>
       </div>
     </div>
   </section>
