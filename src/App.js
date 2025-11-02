@@ -4,6 +4,7 @@ import './App.css';
 function App() {
   const [currentSection, setCurrentSection] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [showTOC, setShowTOC] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
@@ -20,6 +21,22 @@ function App() {
     'thank-you'
   ];
 
+  const sectionTitles = [
+    { id: 'intro', title: 'Giới thiệu', icon: '🏠' },
+    { id: 'theory', title: 'Cơ sở lý thuyết', icon: '📚' },
+    { id: 'case-study', title: 'Google/Alphabet', icon: '🔍' },
+    { id: 'vietnam-context', title: 'Bối cảnh Việt Nam', icon: '🇻🇳' },
+    { id: 'impacts', title: 'Tác động', icon: '⚡' },
+    { id: 'solutions', title: 'Giải pháp', icon: '💡' },
+    { id: 'quiz', title: 'Quiz', icon: '🧠' },
+    { id: 'thank-you', title: 'Cảm ơn', icon: '🙏' }
+  ];
+
+  const navigateToSection = (sectionIndex) => {
+    setCurrentSection(sectionIndex);
+    setShowTOC(false);
+  };
+
   const navigateSection = (direction) => {
     setCurrentSection(prev => {
       if (direction === 'next' && prev < sections.length - 1) return prev + 1;
@@ -31,6 +48,13 @@ function App() {
   return (
     <div className={`App ${isLoaded ? 'loaded' : ''}`}>
       <nav className="navigation">
+        <button 
+          className="toc-toggle" 
+          onClick={() => setShowTOC(!showTOC)}
+          title="Danh sách nội dung"
+        >
+          📋 Mục lục
+        </button>
         <div className="nav-dots">
           {sections.map((_, index) => (
             <button
@@ -41,6 +65,34 @@ function App() {
           ))}
         </div>
       </nav>
+
+      {showTOC && (
+        <div className="table-of-contents" onClick={() => setShowTOC(false)}>
+          <div className="toc-content" onClick={(e) => e.stopPropagation()}>
+            <h3>📋 Mục lục</h3>
+            <ul className="toc-list">
+              {sectionTitles.map((section, index) => (
+                <li key={section.id}>
+                  <button
+                    className={`toc-item ${currentSection === index ? 'active' : ''}`}
+                    onClick={() => navigateToSection(index)}
+                  >
+                    <span className="toc-icon">{section.icon}</span>
+                    <span className="toc-title">{section.title}</span>
+                    <span className="toc-number">{index + 1}</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <button 
+              className="toc-close" 
+              onClick={() => setShowTOC(false)}
+            >
+              ✕ Đóng
+            </button>
+          </div>
+        </div>
+      )}
 
       <main className="main-content">
         {currentSection === 0 && <IntroSection />}
@@ -1057,13 +1109,19 @@ const ThankYouSection = () => (
           </div>
           
           <div className="ai-tools">
-            <h4>🛠️ Công cụ AI đã sử dụng:</h4>
+            <h4>🛠️ Mục đích sử dụng AI:</h4>
             <div className="tools-grid">
               <div className="tool-item">
-                <strong>GitHub Copilot:</strong> Hỗ trợ cấu trúc React components
+                <strong>1. Phát triển kịch bản:</strong> Hỗ trợ xây dựng ý tưởng và cấu trúc cho nội dung sáng tạo
               </div>
               <div className="tool-item">
-                <strong>ChatGPT & NotebookLM:</strong> Brainstorm ý tưởng thiết kế layout và thu thập thông tin về Việt Nam
+                <strong>2. Tìm kiếm ví dụ:</strong> Hỗ trợ tìm các trường hợp minh họa phù hợp với nội dung
+              </div>
+              <div className="tool-item">
+                <strong>3. Thu thập tài liệu:</strong> Tìm kiếm nguồn tham khảo cho việc nghiên cứu thuyết trình
+              </div>
+              <div className="tool-item">
+                <strong>4. Rà soát nội dung:</strong> Kiểm tra và hoàn thiện các phần trong bài thuyết trình
               </div>
             </div>
           </div>
