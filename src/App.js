@@ -406,8 +406,7 @@ const VietnamContextSection = () => {
         "Thu thập dữ liệu di chuyển của 8.5 triệu người Việt¹⁴",
         "38,000 tài xế phụ thuộc hoàn toàn vào ứng dụng¹⁵",
         "Tăng giá cước 35% trong 2 năm qua do thiếu cạnh tranh¹⁶"
-      ],
-      vietnamPolicy: "Nghị định 15/2020/NĐ-CP về quản lý hoạt động vận tải bằng xe ô tô¹⁷"
+      ]
     },
     shopee: {
       title: "Shopee - Thương mại điện tử",
@@ -418,8 +417,7 @@ const VietnamContextSection = () => {
         "Thu thập thói quen mua sắm của 45 triệu người Việt¹⁹",
         "250,000 doanh nghiệp nhỏ phụ thuộc nền tảng²⁰",
         "Kiểm soát giá thông qua thuật toán dynamic pricing²¹"
-      ],
-      vietnamPolicy: "Nghị định 52/2013/NĐ-CP về thương mại điện tử²²"
+      ]
     },
     vingroup: {
       title: "VinGroup - Tập đoàn đa ngành",
@@ -430,15 +428,14 @@ const VietnamContextSection = () => {
         "VinFast chiếm 70% thị trường ô tô điện VN (2023)²⁴",
         "Hệ sinh thái khép kín: VinHomes → VinMart → VinFast → VinSmart²⁵",
         "Ảnh hưởng chính sách quy hoạch đô thị 15 tỉnh thành²⁶"
-      ],
-      vietnamPolicy: "Luật Đầu tư 2020 và Nghị quyết 50/NQ-CP về ưu đãi đặc biệt²⁷"
+      ]
     }
   };
 
   return (
     <section className="section vietnam-section">
       <h2>🇻🇳 Bối cảnh Việt Nam: Độc quyền trong thực tế</h2>
-      <p className="vietnam-subtitle">Phân tích các trường hợp cụ thể tại Việt Nam qua lăng kính MLN</p>
+      <p className="vietnam-subtitle">Phân tích các trường hợp cụ thể tại Việt Nam</p>
 
       <div className="vietnam-selector">
         {Object.entries(vietnamExamples).map(([key, example]) => (
@@ -474,45 +471,18 @@ const VietnamContextSection = () => {
           </div>
 
           <div className="analysis-section">
-            <h4>📜 Khung pháp lý Việt Nam:</h4>
-            <p>{vietnamExamples[activeExample].vietnamPolicy}</p>
-          </div>
-
-          <div className="analysis-section">
-            <h4>🔍 Phân tích MLN:</h4>
-            <div className="mln-analysis">
-              <div className="mln-point">
-                <strong>Giá trị thặng dư:</strong> Thu được từ lao động tài xế, người bán hàng không được trả công đầy đủ
+            <h4>� Phân tích tổng quát:</h4>
+            <div className="general-analysis">
+              <div className="analysis-point">
+                <strong>Tác động kinh tế:</strong> Thu được lợi nhuận từ lao động tài xế, người bán hàng mà không cần trả công đầy đủ
               </div>
-              <div className="mln-point">
-                <strong>Tư bản độc quyền:</strong> Tập trung tài nguyên và công nghệ để loại bỏ đối thủ
+              <div className="analysis-point">
+                <strong>Tập trung quyền lực:</strong> Tập trung tài nguyên và công nghệ để loại bỏ đối thủ cạnh tranh
               </div>
-              <div className="mln-point">
-                <strong>Quan hệ sản xuất:</strong> Tạo ra tầng lớp lao động mới phụ thuộc vào nền tảng số
+              <div className="analysis-point">
+                <strong>Thay đổi xã hội:</strong> Tạo ra các hình thức lao động mới phụ thuộc vào nền tảng số
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="vietnam-policy">
-        <h3>🏛️ Chính sách Việt Nam về độc quyền số:</h3>
-        <div className="policy-grid">
-          <div className="policy-card">
-            <h4>📋 Luật Cạnh tranh 2018</h4>
-            <p>Quy định về hành vi độc quyền và thống lĩnh thị trường²⁸</p>
-          </div>
-          <div className="policy-card">
-            <h4>🔒 Luật An ninh mạng 2018</h4>
-            <p>Kiểm soát dữ liệu và hoạt động của các nền tảng số²⁹</p>
-          </div>
-          <div className="policy-card">
-            <h4>💰 Thuế VAT cho dịch vụ số</h4>
-            <p>Nghị định 126/2020/NĐ-CP về thuế đối với kinh doanh thương mại điện tử³⁰</p>
-          </div>
-          <div className="policy-card">
-            <h4>🌐 Chuyển đổi số quốc gia</h4>
-            <p>Quyết định 749/QĐ-TTg về Chương trình CĐS đến 2025, tầm nhìn 2030³¹</p>
           </div>
         </div>
       </div>
@@ -550,29 +520,12 @@ const VietnamContextSection = () => {
       <div className="vietnam-sources">
         <h4>📚 Nguồn tham khảo (Việt Nam):</h4>
         <div className="sources-list">
-          <p>[13] <a href="https://www.mt.gov.vn/" target="_blank" rel="noopener noreferrer">Báo cáo thị trường vận tải Việt Nam, Bộ GTVT, Q4/2023</a></p>
-          <p>[14] <a href="https://www.grab.com/vn/press/" target="_blank" rel="noopener noreferrer">Grab Vietnam Annual Report 2023</a></p>
-          <p>[15] <a href="https://www.gso.gov.vn/" target="_blank" rel="noopener noreferrer">Thống kê lao động gig economy, Tổng cục Thống kê, 2023</a></p>
-          <p>[16] <a href="https://www.vnu.edu.vn/" target="_blank" rel="noopener noreferrer">Phân tích giá cước vận tải, Viện Kinh tế Việt Nam, 2024</a></p>
-          <p>[17] <a href="https://vanban.chinhphu.vn/page/home.aspx" target="_blank" rel="noopener noreferrer">Nghị định 15/2020/NĐ-CP, Chính phủ Việt Nam</a></p>
-          <p>[18] <a href="https://www.moit.gov.vn/" target="_blank" rel="noopener noreferrer">Vietnam E-commerce Report 2023, Bộ Công Thương</a></p>
-          <p>[19] <a href="https://sea.com/investor" target="_blank" rel="noopener noreferrer">Shopee Vietnam User Statistics, Sea Limited Annual Report 2023</a></p>
-          <p>[20] <a href="https://vecom.vn/" target="_blank" rel="noopener noreferrer">Thống kê doanh nghiệp e-commerce, Hiệp hội Thương mại điện tử VN</a></p>
-          <p>[21] <a href="https://neu.edu.vn/" target="_blank" rel="noopener noreferrer">Nghiên cứu dynamic pricing, Đại học Kinh tế Quốc dân, 2024</a></p>
-          <p>[22] <a href="https://vanban.chinhphu.vn/" target="_blank" rel="noopener noreferrer">Nghị định 52/2013/NĐ-CP về thương mại điện tử</a></p>
-          <p>[23] <a href="https://www.cbre.com.vn/" target="_blank" rel="noopener noreferrer">Báo cáo bất động sản Việt Nam, CBRE Vietnam 2023</a></p>
-          <p>[24] <a href="https://vama.org.vn/" target="_blank" rel="noopener noreferrer">Thống kê ô tô điện, Hiệp hội các nhà sản xuất ô tô VN, 2023</a></p>
-          <p>[25] <a href="https://www.vingroup.net/tin-tuc-su-kien" target="_blank" rel="noopener noreferrer">VinGroup Annual Report 2023</a></p>
-          <p>[26] <a href="https://nioeh.org.vn/" target="_blank" rel="noopener noreferrer">Nghiên cứu tác động quy hoạch đô thị, Viện Kiến trúc Quốc gia, 2024</a></p>
-          <p>[27] <a href="https://vanban.chinhphu.vn/" target="_blank" rel="noopener noreferrer">Luật Đầu tư 2020 và Nghị quyết 50/NQ-CP</a></p>
-          <p>[28] <a href="https://luatvietnam.vn/phap-luat/luat-canh-tranh-2018-179094-d1.html" target="_blank" rel="noopener noreferrer">Luật Cạnh tranh số 23/2018/QH14</a></p>
-          <p>[29] <a href="https://luatvietnam.vn/an-ninh-quoc-phong/luat-an-ninh-mang-2018-178979-d1.html" target="_blank" rel="noopener noreferrer">Luật An ninh mạng số 24/2018/QH14</a></p>
-          <p>[30] <a href="https://vanban.chinhphu.vn/" target="_blank" rel="noopener noreferrer">Nghị định 126/2020/NĐ-CP về thuế TMĐT</a></p>
-          <p>[31] <a href="https://vanban.chinhphu.vn/" target="_blank" rel="noopener noreferrer">Quyết định 749/QĐ-TTg về Chương trình Chuyển đổi số</a></p>
-          <p>[32] <a href="https://mic.gov.vn/" target="_blank" rel="noopener noreferrer">Báo cáo Chuyển đổi số Việt Nam 2024, Bộ TT&TT</a></p>
-          <p>[33] <a href="https://www.ilo.org/hanoi" target="_blank" rel="noopener noreferrer">Báo cáo lao động phi chính thức, ILO Vietnam 2024</a></p>
-          <p>[34] <a href="https://vass.gov.vn/" target="_blank" rel="noopener noreferrer">Nghiên cứu chủ quyền dữ liệu, Viện Khoa học Xã hội VN, 2024</a></p>
-          <p>[35] <a href="https://vinasa.org.vn/" target="_blank" rel="noopener noreferrer">Thống kê doanh nghiệp công nghệ, Hiệp hội Phần mềm VN, 2024</a></p>
+          <p>[13] <a href="https://www.grab.com/vn/press/" target="_blank" rel="noopener noreferrer">Grab Vietnam Annual Report 2023</a></p>
+          <p>[14] <a href="https://sea.com/investor" target="_blank" rel="noopener noreferrer">Shopee Vietnam User Statistics, Sea Limited Annual Report 2023</a></p>
+          <p>[15] <a href="https://www.vingroup.net/tin-tuc-su-kien" target="_blank" rel="noopener noreferrer">VinGroup Annual Report 2023</a></p>
+          <p>[16] <a href="https://www.cbre.com.vn/" target="_blank" rel="noopener noreferrer">Báo cáo bất động sản Việt Nam, CBRE Vietnam 2023</a></p>
+          <p>[17] <a href="https://vama.org.vn/" target="_blank" rel="noopener noreferrer">Thống kê ô tô điện, Hiệp hội các nhà sản xuất ô tô VN, 2023</a></p>
+          <p>[18] <a href="https://mic.gov.vn/" target="_blank" rel="noopener noreferrer">Báo cáo Chuyển đổi số Việt Nam 2024, Bộ TT&TT</a></p>
         </div>
       </div>
     </section>
@@ -773,15 +726,15 @@ const QuizSection = () => {
   const questions = [
     {
       id: 1,
-      question: "Theo Lenin, độc quyền là giai đoạn nào của chủ nghĩa tư bản?",
+      question: "Độc quyền trong thời đại công nghiệp hiện đại có đặc điểm gì?",
       options: [
-        "Giai đoạn đầu",
-        "Giai đoạn phát triển",
-        "Giai đoạn cao nhất",
-        "Giai đoạn suy thoái"
+        "Chỉ tập trung vào sản xuất",
+        "Kiểm soát dữ liệu và công nghệ",
+        "Chỉ hoạt động địa phương",
+        "Không có ảnh hưởng gì"
       ],
-      correct: 2,
-      explanation: "Lenin khẳng định độc quyền là giai đoạn cao nhất của chủ nghĩa tư bản, đặc trưng bởi sự tập trung sản xuất và tư bản."
+      correct: 1,
+      explanation: "Độc quyền hiện đại tập trung vào việc kiểm soát dữ liệu, công nghệ và nền tảng số để tạo ra lợi thế cạnh tranh."
     },
     {
       id: 2,
@@ -821,15 +774,15 @@ const QuizSection = () => {
     },
     {
       id: 5,
-      question: "Theo Kinh tế chính trị Mác-Lênin, giá trị thặng dư trong thời đại số được tạo ra từ:",
+      question: "Lợi nhuận của các tập đoàn công nghệ lớn chủ yếu đến từ:",
       options: [
-        "Lao động sản xuất hàng hóa",
-        "Thu thập và thương mại hóa dữ liệu cá nhân",
-        "Đầu tư tài chính",
-        "Xuất khẩu hàng hóa"
+        "Bán sản phẩm vật lý",
+        "Thu thập và sử dụng dữ liệu người dùng",
+        "Dịch vụ tư vấn",
+        "Cho thuê văn phòng"
       ],
       correct: 1,
-      explanation: "Trong thời đại số, giá trị thặng dư được tạo ra từ việc thu thập dữ liệu cá nhân miễn phí và thương mại hóa chúng để tạo lợi nhuận."
+      explanation: "Các tập đoàn công nghệ tạo ra lợi nhuận chủ yếu từ việc thu thập dữ liệu người dùng và sử dụng chúng cho quảng cáo và dịch vụ."
     },
     {
       id: 6,
@@ -845,7 +798,7 @@ const QuizSection = () => {
     },
     {
       id: 7,
-      question: "Chu trình tác động của độc quyền số bắt đầu từ:",
+      question: "Chu trình hoạt động của độc quyền số bắt đầu từ:",
       options: [
         "Tối ưu lợi nhuận",
         "Thu thập dữ liệu",
@@ -857,15 +810,15 @@ const QuizSection = () => {
     },
     {
       id: 8,
-      question: "Đặc điểm của tư bản tài chính hiện đại là:",
+      question: "Đặc điểm của ngành tài chính công nghệ (Fintech) hiện đại là:",
       options: [
         "Chỉ hoạt động trong lĩnh vực ngân hàng",
-        "Kết hợp công nghệ và tài chính (Fintech)",
+        "Kết hợp công nghệ và tài chính",
         "Chỉ đầu tư vào bất động sản",
         "Tách biệt hoàn toàn với công nghệ"
       ],
       correct: 1,
-      explanation: "Tư bản tài chính hiện đại kết hợp chặt chẽ với công nghệ, tạo ra các nền tảng Fintech và hệ thống thanh toán số."
+      explanation: "Fintech kết hợp chặt chẽ công nghệ và tài chính, tạo ra các nền tảng thanh toán và dịch vụ tài chính số."
     },
     {
       id: 9,
@@ -881,7 +834,7 @@ const QuizSection = () => {
     },
     {
       id: 10,
-      question: "Theo MLN, VinGroup thể hiện đặc điểm nào của độc quyền hiện đại?",
+      question: "VinGroup thể hiện đặc điểm nào của độc quyền hiện đại?",
       options: [
         "Tập trung sản xuất trong một ngành",
         "Hệ sinh thái khép kín đa ngành",
@@ -932,19 +885,32 @@ const QuizSection = () => {
 
   const getScoreMessage = () => {
     const percentage = (score / questions.length) * 100;
-    if (percentage >= 80) return "Xuất sắc! Bạn đã nắm vững lý thuyết MLN122! 🎉";
-    if (percentage >= 60) return "Tốt! Bạn hiểu khá tốt về độc quyền thời đại 4.0! 👍";
-    if (percentage >= 40) return "Khá! Hãy ôn lại một số khái niệm cơ bản! 📚";
-    return "Cần cố gắng thêm! Hãy xem lại các phần lý thuyết! 💪";
+    if (percentage >= 80) return "Tuyệt vời! Bạn thực sự hiểu rõ về chủ đề này! 🎉";
+    if (percentage >= 60) return "Không tệ! Bạn nắm được khá nhiều thông tin! 👍";
+    if (percentage >= 40) return "Cũng ổn! Có thể xem lại một chút để hiểu thêm! 📚";
+    return "Thử lại nhé! Đọc qua một lần nữa sẽ giúp bạn hiểu hơn! 💪";
+  };
+
+  const getScoreImage = () => {
+    const percentage = (score / questions.length) * 100;
+    if (percentage >= 80) return "/1.png"; // Best result
+    if (percentage >= 60) return "/2.png"; // Good result
+    if (percentage >= 40) return "/3.png"; // Fair result
+    return "/4.png"; // Needs improvement
   };
 
   if (showResults) {
     return (
       <section className="section quiz-section">
-        <h2>🎯 Kết quả Quiz MLN122</h2>
+        <h2>🎯 Kết quả Quiz</h2>
         
         <div className="quiz-results">
           <div className="score-display">
+            <img 
+              src={getScoreImage()} 
+              alt="Score result" 
+              className="score-image"
+            />
             <div className="score-circle">
               <span className="score-number">{score}/{questions.length}</span>
               <span className="score-percentage">{Math.round((score/questions.length)*100)}%</span>
@@ -983,7 +949,7 @@ const QuizSection = () => {
 
   return (
     <section className="section quiz-section">
-      <h2>🧠 Quiz: Kiểm tra kiến thức MLN122</h2>
+      <h2>🧠 Quiz: Kiểm tra kiến thức</h2>
       <p className="quiz-subtitle">Độc quyền trong điều kiện Cách mạng công nghiệp 4.0</p>
       
       <div className="quiz-progress">
@@ -1079,6 +1045,38 @@ const ThankYouSection = () => (
           </div>
           <div className="info-item">
             <strong>Trường:</strong> Đại học FPT
+          </div>
+        </div>
+      </div>
+
+      <div className="ai-usage-disclosure">
+        <h3>🤖 AI Usage Declaration</h3>
+        <div className="ai-content">
+          <div className="ai-disclaimer">
+            <p><strong>Cam kết liêm chính học thuật:</strong> AI được sử dụng như công cụ hỗ trợ, không thay thế quá trình nghiên cứu và sáng tạo của sinh viên.</p>
+          </div>
+          
+          <div className="ai-tools">
+            <h4>🛠️ Công cụ AI đã sử dụng:</h4>
+            <div className="tools-grid">
+              <div className="tool-item">
+                <strong>GitHub Copilot:</strong> Hỗ trợ cấu trúc React components
+              </div>
+              <div className="tool-item">
+                <strong>ChatGPT & NotebookLM:</strong> Brainstorm ý tưởng thiết kế layout và thu thập thông tin về Việt Nam
+              </div>
+            </div>
+          </div>
+
+          <div className="student-contribution">
+            <h4>🎨 Đóng góp sáng tạo của sinh viên:</h4>
+            <ul>
+              <li>Phân tích kết nối lý thuyết với thực tế độc quyền số</li>
+              <li>Thiết kế trải nghiệm tương tác độc đáo</li>
+              <li>Nghiên cứu bối cảnh Việt Nam với các ví dụ cụ thể</li>
+              <li>Đề xuất giải pháp tổng hợp cho sinh viên</li>
+              <li>Phát triển quiz tương tác với 11 câu hỏi</li>
+            </ul>
           </div>
         </div>
       </div>

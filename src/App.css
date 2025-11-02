@@ -81,6 +81,82 @@ body {
   max-height: 90vh;
 }
 
+/* Custom Scrollbar Styling for Different Sections */
+/* Default scrollbar for white background sections */
+.section::-webkit-scrollbar {
+  width: 8px;
+}
+
+.section::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.section::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.section::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Blue sections (intro, thank-you) */
+.intro-section::-webkit-scrollbar-track,
+.thank-you-section::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.intro-section::-webkit-scrollbar-thumb,
+.thank-you-section::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.intro-section::-webkit-scrollbar-thumb:hover,
+.thank-you-section::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Vietnam section (orange/pink gradient) */
+.vietnam-section::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.vietnam-section::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.vietnam-section::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Quiz section (teal/green gradient) */
+.quiz-section::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.quiz-section::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.quiz-section::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Firefox scrollbar support */
+.section {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.05);
+}
+
+.intro-section,
+.thank-you-section,
+.vietnam-section,
+.quiz-section {
+  scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+}
+
 @keyframes slideIn {
   from {
     opacity: 0;
@@ -914,55 +990,16 @@ body {
   border-radius: 0 8px 8px 0;
 }
 
-.mln-analysis {
+.general-analysis {
   display: grid;
   gap: 1rem;
 }
 
-.mln-point {
+.analysis-point {
   padding: 1rem;
   background: linear-gradient(135deg, #f8f9fa, #e9ecef);
   border-radius: 10px;
   border-left: 4px solid #e17055;
-}
-
-.vietnam-policy {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 2rem;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  margin-bottom: 2rem;
-}
-
-.vietnam-policy h3 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 1.6rem;
-}
-
-.policy-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-
-.policy-card {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 1.5rem;
-  border-radius: 12px;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.policy-card h4 {
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-}
-
-.policy-card p {
-  font-size: 0.95rem;
-  opacity: 0.9;
 }
 
 .vietnam-challenges {
@@ -1175,6 +1212,16 @@ body {
   margin-bottom: 3rem;
 }
 
+.score-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin: 0 auto 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: block;
+}
+
 .score-circle {
   width: 150px;
   height: 150px;
@@ -1344,6 +1391,78 @@ body {
 
 .info-item strong {
   color: #e1f3ff;
+}
+
+.ai-usage-disclosure {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 20px;
+  margin: 2rem 0;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
+}
+
+.ai-usage-disclosure h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.ai-usage-disclosure h4 {
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  color: #e1f3ff;
+}
+
+.ai-disclaimer {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #ffffff;
+}
+
+.ai-disclaimer p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tool-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 3px solid #74b9ff;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.student-contribution ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.student-contribution li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-bottom: none;
+  padding: 0.5rem 0;
+}
+
+.student-contribution li:hover {
+  transform: translateX(5px);
+  transition: transform 0.3s ease;
 }
 
 .closing-note {
